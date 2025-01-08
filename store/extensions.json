@@ -246,7 +246,41 @@
 		}
       ],
       "hpu": "stor"
-    },	
+    },
+    {
+      "title": "Reedr00t",
+      "results": [
+		 {
+		  "name": "Cub Off",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/cub_off.js",
+		  "descr": "Плагин убирает элементы, предлагающие оформить cub premium",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Start",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/start.js",
+		  "descr": "Плагин позволяет заходить на заблокированные карточки",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Зарубежные подборки",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/inter_movie.js",
+		  "descr": "Плагин добавляет в левом меню пункт с зарубежными подборками",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Дополнительные источники",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/source.js",
+		  "descr": "Плагин добавляет дополнительные источники для получения информации о фильмах",
+		  "available_lampa": 1
+		}
+      ],
+      "hpu": "reedr00t"
+    },		
     {
       "title": "Разное",
       "results": [
