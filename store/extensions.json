@@ -223,6 +223,13 @@
     {
       "title": "Разное",
       "results": [
+	      	{
+      		"name": "Rus movie",
+      		"author": "@reedr00t",
+      		"link": "https://reedr00t.github.io/rusmov.js",
+      		"descr": "demo",
+      		"available_lampa": 1
+ 	   	},
 	        {
       		"name": "Настройка шапки",
       		"author": "@and7ey",
