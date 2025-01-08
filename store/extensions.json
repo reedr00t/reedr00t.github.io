@@ -5,33 +5,33 @@
       "title": "Популярные",
       "results": [
 	{
-		  "name": "BwaRC",
+		  "name": "BwaRC BwaRC v1.3.9",
 		  "author": "@bwato",
-		  "link": "http://bwa.to/co",
-		  "descr": "Фильмы и сериалы в онлайн. Работает на старых устройствах",
+		  "link": "https://bwa.to/o",
+		  "descr": "Фильмы и сериалы в онлайн. BwaRC v1.3.9",
 		  "available_lampa": 1
-	},      
-       {
-		  "name": "Durex",
-		  "author": "@bwato",
-		  "link": "http://durex.monster",
-		  "descr": "Фильмы и сериалы в онлайн",
-		  "available_lampa": 1
-	},
-        {
-		  "name": "Телевидение by Skaz ",
-		  "author": "@helpiptv",
-		  "link": "http://skaz.tv/tv.js",
-		  "descr": "Бесплатные каналы и 1500+ каналов по подписке, IPTV плейлисты @skaztv_bot",
+		},       
+    {
+		  "name": "Онлайн Stream new",
+		  "author": "@lampa",
+		  "link": "http://llpp.in/v/vod.js",
+		  "descr": "Фильмы и сериалы в онлайн (Новый)",
 		  "available_lampa": 1
 		},
-		{
+	{
 		  "name": "MODS's",
 		  "author": "@modss_group",
 		  "link": "http://lampa.stream/modss",
 		  "descr": "Фильмы и сериалы в онлайн. Плюс различные дополнения через меню настроек Modss.",
 		  "available_lampa": 1
-		}
+		},
+	{
+		  "name": "Телевидение by Skaz ",
+		  "author": "@helpiptv",
+		  "link": "http://skaz.tv/tv.js",
+		  "descr": "Бесплатные каналы и 1500+ каналов по подписке, IPTV плейлисты @skaztv_bot",
+		  "available_lampa": 1
+		}	
       ],
       "hpu": "best"
     },
@@ -81,7 +81,7 @@
 		  "available_lampa": 1
 		},
 	      	{
-		  "name": "BwaRC old",
+		  "name": "BwaRC BwaRC v1.3.9",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
 		  "descr": "Фильмы и сериалы в онлайн. BwaRC v1.3.9",
@@ -109,7 +109,7 @@
 		  "available_lampa": 1
 		},
 	      	{
-		  "name": "Онлайн Stream",
+		  "name": "Онлайн Stream old",
 		  "author": "",
 		  "link": "http://arkmv.ru/vod",
 		  "descr": "Онлайн",
