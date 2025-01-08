@@ -81,6 +81,13 @@
 		  "available_lampa": 1
 		},
 	      	{
+		  "name": "BwaRC old",
+		  "author": "@bwato",
+		  "link": "https://bwa.to/o",
+		  "descr": "Фильмы и сериалы в онлайн. BwaRC v1.3.9",
+		  "available_lampa": 1
+		}, 	
+	      	{
 		  "name": "BwaRC2",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/rc",
