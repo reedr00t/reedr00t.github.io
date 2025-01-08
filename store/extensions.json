@@ -79,7 +79,14 @@
 		  "link": "http://bwa.to/co",
 		  "descr": "Фильмы и сериалы в онлайн. Работает на старых устройствах",
 		  "available_lampa": 1
-		},  
+		},
+	      	{
+		  "name": "BwaRC2",
+		  "author": "@bwato",
+		  "link": "https://bwa.to/rc",
+		  "descr": "Фильмы и сериалы в онлайн. Новый",
+		  "available_lampa": 1
+		}, 	      
 	      	{
 		  "name": "Onlyskaz",
 		  "author": "@lampa_land",
