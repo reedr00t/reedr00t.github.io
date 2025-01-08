@@ -228,6 +228,26 @@
       "hpu": "tv"
     },
     {
+      "title": "Store",
+      "results": [
+		 {
+		  "name": "Pirat stor",
+		  "author": "@skaz",
+		  "link": "http://skaz.tv/stor.js",
+		  "descr": "Пиратские плагины",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "My stor",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/store.js",
+		  "descr": "Мои плагины",
+		  "available_lampa": 1
+		}
+      ],
+      "hpu": "stor"
+    },	
+    {
       "title": "Разное",
       "results": [
 	      	{
