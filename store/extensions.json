@@ -4,6 +4,13 @@
     {
       "title": "Популярные",
       "results": [
+	{
+		  "name": "BwaRC",
+		  "author": "@reedr00t",
+		  "link": "https://bwa.to/o",
+		  "descr": "Фильмы и сериалы в онлайн",
+		  "available_lampa": 1
+	},      
        {
 		  "name": "Durex",
 		  "author": "@bwato",
