@@ -233,7 +233,7 @@
 		 {
 		  "name": "Pirat stor",
 		  "author": "@skaz",
-		  "link": "http://skaz.tv/stor.js",
+		  "link": "https://skaztv.online/store.js",
 		  "descr": "Пиратские плагины",
 		  "available_lampa": 1
 		},
@@ -255,6 +255,13 @@
 		  "author": "@reedr00t",
 		  "link": "http://llpp.in/ot.js",
 		  "descr": "Удаление трейлеров и аниме раздела",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Anime only Off",
+		  "author": "@reedr00t",
+		  "link": "http://llpp.in/ur/noanime.js",
+		  "descr": "Удаление только аниме",
 		  "available_lampa": 1
 		},
 		 {
