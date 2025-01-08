@@ -251,6 +251,13 @@
       "title": "Reedr00t",
       "results": [
 		 {
+		  "name": "Anime Off",
+		  "author": "@reedr00t",
+		  "link": "http://llpp.in/ot.js",
+		  "descr": "Удаление трейлеров и аниме раздела",
+		  "available_lampa": 1
+		},
+		 {
 		  "name": "Cub Off",
 		  "author": "@reedr00t",
 		  "link": "https://reedr00t.github.io/cub_off.js",
