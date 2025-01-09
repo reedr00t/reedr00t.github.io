@@ -40,10 +40,10 @@ fetch(server_2 + '/echo')												//Проверяем LocalHost
 setTimeout(function() { 
 /* Опрашиваем Сервер_3 === резервный метод */
 fetch(server_3 + '/echo')												//Проверяем LocalHost
-	.then(response => {
+	.then(err => {
 		Lampa.Storage.set('FreeServ_3', server_3) 			//если кандидат ответил на запрос
 		})		
-	.catch(err => Lampa.Storage.set('FreeServ_3', 'NotFound'))	//если не ответил
+	.catch(response => Lampa.Storage.set('FreeServ_3', 'NotFound'))	//если не ответил
 }, 10000)
 
 
