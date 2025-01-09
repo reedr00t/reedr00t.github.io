@@ -286,9 +286,9 @@
 		  "available_lampa": 1
 		},
 		{
-		  "name": "Дополнительные источники",
+		  "name": "Дополнительные источники о фильмах",
 		  "author": "@reedr00t",
-		  "link": "https://reedr00t.github.io/source.js",
+		  "link": "https://reedr00t.github.io/addsource.js",
 		  "descr": "Плагин добавляет дополнительные источники для получения информации о фильмах",
 		  "available_lampa": 1
 		}
@@ -298,13 +298,6 @@
     {
       "title": "Разное",
       "results": [
-	      	{
-      		"name": "Rus movie",
-      		"author": "@reedr00t",
-      		"link": "https://reedr00t.github.io/rusmov.js",
-      		"descr": "demo",
-      		"available_lampa": 1
- 	   	},
 	        {
       		"name": "Настройка шапки",
       		"author": "@and7ey",
