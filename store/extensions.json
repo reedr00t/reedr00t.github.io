@@ -279,10 +279,10 @@
 		  "available_lampa": 1
 		},
 		{
-		  "name": "Зарубежные подборки",
+		  "name": "Иностранные подборки",
 		  "author": "@reedr00t",
-		  "link": "https://reedr00t.github.io/inter_movie.js",
-		  "descr": "Плагин добавляет в левом меню пункт с зарубежными подборками",
+		  "link": "https://reedr00t.github.io/inmov.js",
+		  "descr": "Плагин добавляет в левом меню пункт с мировыми подборками",
 		  "available_lampa": 1
 		},
 		{
