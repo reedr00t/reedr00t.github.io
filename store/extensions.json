@@ -369,6 +369,20 @@
 		  "available_lampa": 1
 		},
 		{
+		  "name": "Приятные мелочи (reserve)",
+		  "author": "@AndreyURL54",
+		  "link": "https://andreyurl54.github.io/diesel5/tricks.js",
+		  "descr": "Дополнение некоторых востребованных функций и дизайна, которых вам не хватало",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Приятные мелочи",
+		  "author": "@lampa",
+		  "link": "https://cub.red/plugin/tracks",
+		  "descr": "Дополнение некоторых функций",
+		  "available_lampa": 1
+		},
+		{
 		  "name": "Отключение Websocket",
 		  "author": "@rootu",
 		  "link": "http://plugin.rootu.top/wsoff.js",
