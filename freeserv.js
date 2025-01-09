@@ -13,10 +13,10 @@ Lampa.Storage.set('FreeServ_6', 'NotFound')	//при запуске обнуля
 /* Задаём значения адресов серверов, с портом */
 var server_1 = 'torr.unknot.ru:8090';
 var server_2 = 'torr1.unknot.ru';
-var server_3 = '176.124.198.209:8595';
-var server_4 = 'Trs.ix.tc:8595';
-var server_5 = 'Jaos.ix.tc:8595';
-var server_6 = 'ts.ozerki.org:8090';
+var server_3 = 'torr1.unknot.ru';
+var server_4 = 'torr1.unknot.ru';
+var server_5 = 'torr1.unknot.ru';
+var server_6 = 'torr1.unknot.ru';
 
 
 /* Прячем пустые значения серверов: NotFound */
