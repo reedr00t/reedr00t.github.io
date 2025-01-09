@@ -265,10 +265,10 @@
 		  "available_lampa": 1
 		},
 		 {
-		  "name": "Cub Off",
+		  "name": "Ad Off",
 		  "author": "@reedr00t",
-		  "link": "https://reedr00t.github.io/cub_off.js",
-		  "descr": "Плагин убирает элементы, предлагающие оформить cub premium",
+		  "link": "https://reedr00t.github.io/coff.js",
+		  "descr": "Плагин убирает элементы, предлагающие оформить premium",
 		  "available_lampa": 1
 		},
 		{
