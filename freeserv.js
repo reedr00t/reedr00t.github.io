@@ -25,7 +25,7 @@ fetch(server_1 + '/echo')												//Проверяем LocalHost
 	.then(response => {
 		Lampa.Storage.set('FreeServ_1', server_1) 			//если кандидат ответил на запрос
 		})		
-	.catch(err => Lampa.Storage.set('FreeServ_1', server_1'))	//если не ответил
+	.catch(err => Lampa.Storage.set('FreeServ_1', 'NotFound'))	//если не ответил
 }, 1000)
 
 setTimeout(function() { 
@@ -34,7 +34,7 @@ fetch(server_2 + '/echo')												//Проверяем LocalHost
 	.then(response => {
 		Lampa.Storage.set('FreeServ_2', server_2) 			//если кандидат ответил на запрос
 		})		
-	.catch(err => Lampa.Storage.set('FreeServ_2', server_2))	//если не ответил
+	.catch(err => Lampa.Storage.set('FreeServ_2', 'NotFound'))	//если не ответил
 }, 5000)
 	
 setTimeout(function() { 
@@ -43,7 +43,7 @@ fetch(server_3 + '/echo')												//Проверяем LocalHost
 	.then(response => {
 		Lampa.Storage.set('FreeServ_3', server_3) 			//если кандидат ответил на запрос
 		})		
-	.catch(err => Lampa.Storage.set('FreeServ_3', server_3))	//если не ответил
+	.catch(err => Lampa.Storage.set('FreeServ_3', 'NotFound'))	//если не ответил
 }, 10000)
 
 
