@@ -22,7 +22,14 @@
 		  "name": "Онлайн Stream old",
 		  "author": "",
 		  "link": "http://arkmv.ru/vod",
-		  "descr": "Онлайн",
+		  "descr": "Online. Stream(lampac) v1.0",
+		  "available_lampa": 1
+		},
+	{
+		  "name": "Онлайн Мод",
+		  "author": "@t_anton",
+		  "link": "https://nb557.github.io/plugins/online_mod.js",
+		  "descr": "Фильмы и сериалы в онлайн. online_mod 07.01.2025",
 		  "available_lampa": 1
 		},	
 	{
@@ -60,6 +67,13 @@
 		  "available_lampa": 1
 		},
 		{
+		  "name": "Онлайн Stream old",
+		  "author": "",
+		  "link": "http://arkmv.ru/vod",
+		  "descr": "Online. Stream(lampac) v1.0",
+		  "available_lampa": 1
+		},
+		{
 		  "name": "BwaJS",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
@@ -74,17 +88,17 @@
 		  "available_lampa": 1
 		},
 			{
-		  "name": "Durex",
+		  "name": "Durex monster",
 		  "author": "@durex.monster",
 		  "link": "http://durex.monster/online.js",
-		  "descr": "Фильмы и сериалы в онлайн",
+		  "descr": "Фильмы и сериалы в онлайн (Durex Monster)",
 		  "available_lampa": 1
 		},
 	      	 {
 		  "name": "VideoCDN",
 		  "author": "@lampa_land",
 		  "link": "http://skaz.tv/vcdn.js",
-		  "descr": "Фильмы и сериалы в онлайн с сервиса VCDN",
+		  "descr": "Фильмы и сериалы в онлайн с сервиса VCDN (VideoCDN)",
 		  "available_lampa": 1
 		},  
 	      	{
@@ -112,21 +126,14 @@
 		  "name": "Onlyskaz",
 		  "author": "@lampa_land",
 		  "link": "http://skaz.tv/onlines.js",
-		  "descr": "Онлайн фильмы и сериалы 4K для подписчиков @skaztv_bot. Серверы в России (возможен геоблок)",
+		  "descr": "Онлайн фильмы и сериалы 4K для подписчиков @skaztv_bot.(Onlyskaz)",
 		  "available_lampa": 1
 		},  
 		{
 		  "name": "Showy",
 		  "author": "Showy",
 		  "link": "http://showy.online/m.js",
-		  "descr": "Необходима авторизация через телеграм бота. Онлайн, поддержка 4к",
-		  "available_lampa": 1
-		},
-	      	{
-		  "name": "Онлайн Stream old",
-		  "author": "",
-		  "link": "http://arkmv.ru/vod",
-		  "descr": "Онлайн",
+		  "descr": "Необходима авторизация через телеграм бота. Онлайн, поддержка 4к (Showy)",
 		  "available_lampa": 1
 		},
         	{
