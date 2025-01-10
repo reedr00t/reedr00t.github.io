@@ -12,10 +12,10 @@
 		  "available_lampa": 1
 		},       
     {
-		  "name": "Онлайн Stream new",
+		  "name": "Онлайн Stream",
 		  "author": "@lampa",
 		  "link": "http://llpp.in/v/vod.js",
-		  "descr": "Фильмы и сериалы в онлайн (Новый)",
+		  "descr": "Фильмы и сериалы в онлайн (online_mod 31.01.2024)",
 		  "available_lampa": 1
 		},
 	{
@@ -29,7 +29,7 @@
 		  "name": "Онлайн Мод",
 		  "author": "@t_anton",
 		  "link": "https://nb557.github.io/plugins/online_mod.js",
-		  "descr": "Фильмы и сериалы в онлайн. online_mod 07.01.2025",
+		  "descr": "Фильмы и сериалы в онлайн. (online_mod 07.01.2025)",
 		  "available_lampa": 1
 		},	
 	{
@@ -63,7 +63,7 @@
 		  "name": "Онлайн Мод",
 		  "author": "@t_anton",
 		  "link": "https://nb557.github.io/plugins/online_mod.js",
-		  "descr": "Фильмы и сериалы в онлайн",
+		  "descr": "Фильмы и сериалы в онлайн (online_mod 07.01.2025)",
 		  "available_lampa": 1
 		},
 		{
