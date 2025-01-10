@@ -19,6 +19,13 @@
 		  "available_lampa": 1
 		},
 	{
+		  "name": "Онлайн Stream old",
+		  "author": "",
+		  "link": "http://arkmv.ru/vod",
+		  "descr": "Онлайн",
+		  "available_lampa": 1
+		},	
+	{
 		  "name": "MODS's",
 		  "author": "@modss_group",
 		  "link": "http://lampa.stream/modss",
@@ -64,6 +71,13 @@
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
 		  "descr": "Фильмы и сериалы в онлайн. Нужна поддержка WebAssembly и версия Chrome > 80",
+		  "available_lampa": 1
+		},
+			{
+		  "name": "Durex",
+		  "author": "@durex.monster",
+		  "link": "http://durex.monster/online.js",
+		  "descr": "Фильмы и сериалы в онлайн",
 		  "available_lampa": 1
 		},
 	      	 {
