@@ -8,7 +8,7 @@
 		  "name": "BwaRC BwaRC v1.3.9",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
-		  "descr": "Фильмы и сериалы в онлайн. BwaRC v1.3.9",
+		  "descr": "Фильмы и сериалы в онлайн. (BwaRC v1.3.9)",
 		  "available_lampa": 1
 		},       
     {
@@ -19,19 +19,19 @@
 		  "available_lampa": 1
 		},
 	{
-		  "name": "Онлайн Stream old",
-		  "author": "",
-		  "link": "http://arkmv.ru/vod",
-		  "descr": "Online. Stream(lampac) v1.0",
-		  "available_lampa": 1
-		},
-	{
 		  "name": "Онлайн Мод",
 		  "author": "@t_anton",
 		  "link": "https://nb557.github.io/plugins/online_mod.js",
 		  "descr": "Фильмы и сериалы в онлайн. (online_mod 07.01.2025)",
 		  "available_lampa": 1
 		},	
+	{
+		  "name": "Онлайн Stream old",
+		  "author": "",
+		  "link": "http://arkmv.ru/vod",
+		  "descr": "Online. Stream(lampac) v1.0",
+		  "available_lampa": 1
+		},
 	{
 		  "name": "MODS's",
 		  "author": "@modss_group",
@@ -77,51 +77,44 @@
 		  "name": "BwaJS",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
-		  "descr": "Фильмы и сериалы в онлайн. Нужна поддержка WebAssembly и версия Chrome > 80",
+		  "descr": "Фильмы и сериалы в онлайн. Нужна поддержка WebAssembly и версия Chrome > 80 (BwaRC v1.3.9)",
 		  "available_lampa": 1
 		},
-	      	{
-		  "name": "Durex",
+		{
+		  "name": "BwaRC BwaRC v1.3.9",
 		  "author": "@bwato",
 		  "link": "https://bwa.to/o",
-		  "descr": "Фильмы и сериалы в онлайн. Нужна поддержка WebAssembly и версия Chrome > 80",
+		  "descr": "Фильмы и сериалы в онлайн. (BwaRC v1.3.9)",
 		  "available_lampa": 1
-		},
-			{
+		}, 	
+	    {
+		  "name": "BwaRC",
+		  "author": "@bwato",
+		  "link": "http://bwa.to/co",
+		  "descr": "Фильмы и сериалы в онлайн. Работает на старых устройствах (BwaRC v1.3.9)",
+		  "available_lampa": 1
+		}, 
+		 {
+		  "name": "BwaRC2",
+		  "author": "@bwato",
+		  "link": "https://bwa.to/rc",
+		  "descr": "Фильмы и сериалы в онлайн. Новый (BwaRC v1.3.9)",
+		  "available_lampa": 1
+		}, 	 
+		{
 		  "name": "Durex monster",
 		  "author": "@durex.monster",
 		  "link": "http://durex.monster/online.js",
 		  "descr": "Фильмы и сериалы в онлайн (Durex Monster)",
 		  "available_lampa": 1
 		},
-	      	 {
+	    {
 		  "name": "VideoCDN",
 		  "author": "@lampa_land",
 		  "link": "http://skaz.tv/vcdn.js",
 		  "descr": "Фильмы и сериалы в онлайн с сервиса VCDN (VideoCDN)",
 		  "available_lampa": 1
 		},  
-	      	{
-		  "name": "BwaRC",
-		  "author": "@bwato",
-		  "link": "http://bwa.to/co",
-		  "descr": "Фильмы и сериалы в онлайн. Работает на старых устройствах",
-		  "available_lampa": 1
-		},
-	      	{
-		  "name": "BwaRC BwaRC v1.3.9",
-		  "author": "@bwato",
-		  "link": "https://bwa.to/o",
-		  "descr": "Фильмы и сериалы в онлайн. BwaRC v1.3.9",
-		  "available_lampa": 1
-		}, 	
-	      	{
-		  "name": "BwaRC2",
-		  "author": "@bwato",
-		  "link": "https://bwa.to/rc",
-		  "descr": "Фильмы и сериалы в онлайн. Новый",
-		  "available_lampa": 1
-		}, 	      
 	      	{
 		  "name": "Onlyskaz",
 		  "author": "@lampa_land",
