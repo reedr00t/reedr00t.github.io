@@ -40,17 +40,24 @@
 		  "available_lampa": 1
 		},
 	{
+		  "name": "Durex monster",
+		  "author": "@durex.monster",
+		  "link": "http://durex.monster/online.js",
+		  "descr": "Фильмы и сериалы в онлайн [Durex Monster]",
+		  "available_lampa": 1
+		},
+	{
 		  "name": "IPTV",
 		  "author": "@lampa",
 		  "link": "http://cub.red/plugin/iptv",
 		  "descr": "Плагин для просмотра IPTV каналов",
 		  "available_lampa": 1
 		},
-	{
-		  "name": "Телевидение by Skaz ",
+		{
+		  "name": "ТВ by skaz 2.0",
 		  "author": "@helpiptv",
-		  "link": "http://skaz.tv/tv.js",
-		  "descr": "Бесплатные каналы и 1500+ каналов по подписке, IPTV плейлисты @skaztv_bot",
+		  "link": "http://skaz.tv/tv2.js",
+		  "descr": "Версия ТВ by skaz плагина на основе IPTV",
 		  "available_lampa": 1
 		}	
       ],
@@ -66,7 +73,14 @@
 		  "descr": "Фильмы и сериалы в онлайн. На выбор доступно 17 балансеров и различные дополнения через меню настроек Modss.",
 		  "available_lampa": 1
 		},
-                {
+		{
+		  "name": "Онлайн Stream",
+		  "author": "@lampa",
+		  "link": "http://llpp.in/v/vod.js",
+		  "descr": "Фильмы и сериалы в онлайн [online_mod 31.01.2024]",
+		  "available_lampa": 1
+		},
+        {
 		  "name": "Онлайн Мод",
 		  "author": "@t_anton",
 		  "link": "https://nb557.github.io/plugins/online_mod.js",
@@ -87,13 +101,6 @@
 		  "descr": "Фильмы и сериалы в онлайн. Нужна поддержка WebAssembly и версия Chrome > 80 [BwaRC v1.3.9]",
 		  "available_lampa": 1
 		},
-		{
-		  "name": "BwaRC BwaRC v1.3.9",
-		  "author": "@bwato",
-		  "link": "https://bwa.to/o",
-		  "descr": "Фильмы и сериалы в онлайн. [BwaRC v1.3.9]",
-		  "available_lampa": 1
-		}, 	
 	    {
 		  "name": "BwaRC",
 		  "author": "@bwato",
@@ -245,7 +252,8 @@
 		  "link": "http://cdn.kulik.uz/cors",
 		  "descr": "Просмотр IPTV каналов, отсортированных по различным категориям. Есть возможность поменять стиль плагина, сервер вещания, а также добавить каналы в избранное",
 		  "available_lampa": 1
-		},{
+		},
+		{
 		  "name": "ТВ by skaz 2.0",
 		  "author": "@helpiptv",
 		  "link": "http://skaz.tv/tv2.js",
