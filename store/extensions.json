@@ -59,7 +59,63 @@
 		  "link": "http://skaz.tv/tv2.js",
 		  "descr": "Версия ТВ by skaz плагина на основе IPTV",
 		  "available_lampa": 1
-		}	
+		},
+		 {
+		  "name": "Anime and trailer Off",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/ot.js",
+		  "descr": "Удаление трейлеров и аниме раздела",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Ad Off",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/coff.js",
+		  "descr": "Плагин убирает элементы, предлагающие оформить premium",
+		  "available_lampa": 1
+		},
+		{
+      		"name": "Кинопоиск",
+      		"author": "@and7ey",
+      		"link": "https://and7ey.github.io/lampa/kinopoisk.js",
+      		"descr": "Отображает в приложении список фильмов из папки Буду смотреть на Кинопоиске",
+      		"available_lampa": 1
+ 	 	 },
+		 {
+		  "name": "Предзагрузка ts",
+		  "author": "@rootu",
+		  "link": "https://plugin.rootu.top/ts-preload.js",
+		  "descr": "Плагин визуализации предзагрузки торрентов для встроенного клиента TorrServer",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Приятные мелочи",
+		  "author": "@AndreyURL54",
+		  "link": "https://skaztv.online/js/tricks.js",
+		  "descr": "Дополнение некоторых востребованных функций и дизайна, которых вам не хватало. (mod. Без проверки на MSX)",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Приятные мелочи",
+		  "author": "@lampa",
+		  "link": "https://cub.red/plugin/tracks",
+		  "descr": "Плагин заменяет название аудиодорожек и субтитров в плеере, плагин работает только в торрентах.",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Коллекции CUB",
+		  "author": "@lampa",
+		  "link": "http://cub.red/plugin/collections",
+		  "descr": "Обнаружьте захватывающие коллекции фильмов и сериалов. От новинок до классики — каждая коллекция это увлекательное погружение в мир киноискусства.",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Подборки",
+		  "author": "@lampa_land",
+		  "link": "https://lampaplugins.github.io/store/p.js",
+		  "descr": "Подборки от онлайн кинотеатров, мультсериалы и мультфильмы.",
+		  "available_lampa": 1
+		}
       ],
       "hpu": "best"
     },
@@ -301,7 +357,7 @@
 		  "available_lampa": 1
 		}, 
 		 {
-		  "name": "Anime Off",
+		  "name": "Anime and trailer Off",
 		  "author": "@reedr00t",
 		  "link": "https://reedr00t.github.io/ot.js",
 		  "descr": "Удаление трейлеров и аниме раздела",
@@ -355,6 +411,20 @@
       		"descr": "Добавляет возможность скрыть элементы в шапке приложения Лампа",
       		"available_lampa": 1
  	   	},
+		{
+		  "name": "Коллекции CUB",
+		  "author": "@lampa",
+		  "link": "http://cub.red/plugin/collections",
+		  "descr": "Обнаружьте захватывающие коллекции фильмов и сериалов. От новинок до классики — каждая коллекция это увлекательное погружение в мир киноискусства.",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Подборки",
+		  "author": "@lampa_land",
+		  "link": "https://lampaplugins.github.io/store/p.js",
+		  "descr": "Подборки от онлайн кинотеатров, мультсериалы и мультфильмы.",
+		  "available_lampa": 1
+		},
 		{
       		"name": "Логотипы вместо названий",
       		"author": "@lampa_land",
@@ -429,7 +499,7 @@
 		  "name": "Приятные мелочи",
 		  "author": "@lampa",
 		  "link": "https://cub.red/plugin/tracks",
-		  "descr": "Дополнение некоторых функций",
+		  "descr": "Плагин заменяет название аудиодорожек и субтитров в плеере, плагин работает только в торрентах.",
 		  "available_lampa": 1
 		},
 		{
