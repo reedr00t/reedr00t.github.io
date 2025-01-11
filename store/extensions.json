@@ -5,9 +5,9 @@
       "title": "Популярные",
       "results": [
 	{
-		  "name": "BwaRC BwaRC v1.3.9",
-		  "author": "@bwato",
-		  "link": "https://bwa.to/o",
+		  "name": "BwaRC v1.3.9 RR",
+		  "author": "@reedr00t",
+		  "link": "http://bwa.to/rc/jrub1f5",
 		  "descr": "Фильмы и сериалы в онлайн. (BwaRC v1.3.9)",
 		  "available_lampa": 1
 		},       
@@ -289,7 +289,7 @@
 		  "name": "BwaRC v1.3.9 RR old",
 		  "author": "@reedr00t",
 		  "link": "http://bwa.to/jrub1f5",
-		  "descr": "Фильмы и сериалы в онлайн. (BwaRC v1.3.9)",
+		  "descr": "Фильмы и сериалы в онлайн. старая версия [BwaRC v1.3.9]",
 		  "available_lampa": 1
 		}, 
 		 {
