@@ -40,6 +40,13 @@
 		  "available_lampa": 1
 		},
 	{
+		  "name": "IPTV",
+		  "author": "@lampa",
+		  "link": "http://cub.red/plugin/iptv",
+		  "descr": "Плагин для просмотра IPTV каналов",
+		  "available_lampa": 1
+		},
+	{
 		  "name": "Телевидение by Skaz ",
 		  "author": "@helpiptv",
 		  "link": "http://skaz.tv/tv.js",
@@ -218,6 +225,13 @@
     {
       "title": "Телевидение",
       "results": [
+	  	{
+		  "name": "IPTV",
+		  "author": "@lampa",
+		  "link": "http://cub.red/plugin/iptv",
+		  "descr": "Плагин для просмотра IPTV каналов",
+		  "available_lampa": 1
+		},
 		 {
 		  "name": "ТВ by skaz",
 		  "author": "@helpiptv",
@@ -264,6 +278,13 @@
     {
       "title": "Reedr00t",
       "results": [
+		 {
+		  "name": "BwaRC v1.3.9 RR",
+		  "author": "@reedr00t",
+		  "link": "http://bwa.to/rc/jrub1f5",
+		  "descr": "Фильмы и сериалы в онлайн. (BwaRC v1.3.9)",
+		  "available_lampa": 1
+		}, 
 		 {
 		  "name": "Anime Off",
 		  "author": "@reedr00t",
