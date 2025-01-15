@@ -12134,7 +12134,7 @@
     } ///////FILMIX/////////
 
 
-    var filmix_headers = Lampa.Platform.is('android') ? {
+    var filmix_headers = (Lampa.Platform.is('android') || Lampa.Platform.is('Tizen') || Lampa.Platform.is('Webos')) ? {
       'User-Agent': Utils.filmixUserAgent()
     } : {};
     var api_url = 'http://filmixapp.cyou/api/v2/';
@@ -12145,7 +12145,7 @@
     Lampa.Storage.listener.follow('change', function (e) {
       if (e.name == 'filmix_token') {
         window.mod_filmix = {
-          max_qualitie: 480,
+          max_qualitie: 720,
           is_max_qualitie: false
         };
         if (e.value) checkPro(e.value);else {
