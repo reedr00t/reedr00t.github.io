@@ -4,6 +4,13 @@
     {
       "title": "Популярные",
       "results": [
+	      	{
+		  "name": "smotret24",
+		  "author": "@smotret24",
+		  "link": "http://smotret24.ru/online.js",
+		  "descr": "Фильмы и сериалы в онлайн. [смотреть!]",
+		  "available_lampa": 1
+		},  
 	{
 		  "name": "BwaRC v1.3.9 RR",
 		  "author": "@reedr00t",
