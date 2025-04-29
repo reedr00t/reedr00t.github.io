@@ -2,178 +2,225 @@
 (function() {
     'use strict';
 
-    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
-    const HDREZKA_SEARCH = 'https://hdrezka.ag/search/?q=';
-    const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36';
+    const CORS_PROXY = 'https://cors.convert2.net/'; // Альтернативный прокси
+    const HDREZKA_DOMAIN = 'https://hdrezka.ag';
+    const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36';
 
-    async function fetchHDRezka(url) {
-        try {
-            const response = await fetch(CORS_PROXY + url, {
-                headers: { 'User-Agent': USER_AGENT }
-            });
-            return await response.text();
-        } catch (e) {
-            Lampa.Noty.show('Ошибка подключения к HDRezka');
-            return null;
-        }
-    }
-
-    function parseSeasons(html) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        return Array.from(doc.querySelectorAll('.b-simple_season__item')).map(season => ({
-            id: season.dataset.tab_id,
-            title: season.textContent.trim(),
-            episodes: Array.from(season.querySelectorAll('.b-simple_episode__item')).map(episode => ({
-                id: episode.dataset.episode_id,
-                title: episode.textContent.trim(),
-                url: episode.querySelector('a').href
-            }))
-        }));
-    }
-
-    async function getVideoSources(episodeUrl) {
-        const html = await fetchHDRezka(episodeUrl);
-        const match = html.match(/\[(\{.*?\})\]/);
-        try {
-            return JSON.parse(match[0]).filter(source => 
-                source.url.match(/\.(m3u8|mp4|mkv)/i)
-            );
-        } catch (e) {
-            return [];
-        }
-    }
-
-    Lampa.Search.addSource({
+    // Регистрация плагина
+    Lampa.Plugin.add({
+        name: 'hdrezka_online',
         title: 'HDRezka',
-        params: { lazy: true },
-        
-        search: async ({ query }) => {
-            const html = await fetchHDRezka(HDREZKA_SEARCH + encodeURIComponent(query));
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            
-            return Array.from(doc.querySelectorAll('.b-content__inline_item')).map(item => ({
-                title: item.querySelector('.title').textContent,
-                year: item.querySelector('.year').textContent,
-                url: item.querySelector('a').href,
-                poster: item.querySelector('img').src
-            }));
+        description: 'Онлайн-просмотр с HDRezka.ag',
+        version: '1.0',
+        component: 'HdRezkaComponent',
+        icon: 'https://i.imgur.com/5ZJQZ9Q.png',
+        onLaunch: function(item) {
+            Lampa.Activity.push({
+                component: 'HdRezkaComponent',
+                url: item.url,
+                title: item.title,
+                movie: item
+            });
         }
     });
 
-    Lampa.Component.add('hdrezka', {
+    // Компонент плеера
+    Lampa.Component.add('HdRezkaComponent', {
         init() {
-            this.seasons = [];
-            this.currentSource = null;
-        },
-
-        create() {
-            return {
-                html: `
-                    <div class="hdrezka-container">
-                        <div class="seasons-selector"></div>
-                        <div class="episodes-list"></div>
-                        <div class="quality-selector"></div>
-                    </div>
-                `,
-                style: `
-                    .hdrezka-container { padding: 20px; }
-                    .season-item { padding: 10px; cursor: pointer; }
-                    .episode-item { padding: 5px 15px; cursor: pointer; }
-                    .quality-item { background: #2c2c2c; padding: 8px; margin: 5px; }
-                `
+            this.state = {
+                loading: true,
+                seasons: [],
+                current: {
+                    season: null,
+                    episode: null,
+                    sources: []
+                }
             };
         },
 
-        async load(url) {
-            const html = await fetchHDRezka(url);
-            this.seasons = parseSeasons(html);
-            this.renderSeasons();
-        },
+        template: `
+            <div class="hdrezka-container">
+                <div class="hdrezka-loader" v-if="state.loading"></div>
+                
+                <div class="hdrezka-content" v-if="!state.loading">
+                    <div class="hdrezka-season-selector">
+                        <div class="season-item" 
+                            v-for="season in state.seasons" 
+                            @click="selectSeason(season)"
+                            :class="{active: season.id === current.season?.id}">
+                            {{ season.title }}
+                        </div>
+                    </div>
 
-        renderSeasons() {
-            const html = this.seasons.map(season => `
-                <div class="season-item" data-id="${season.id}">
-                    ${season.title}
-                    <div class="episodes-list" style="display:none;">
-                        ${season.episodes.map(ep => `
-                            <div class="episode-item" data-url="${ep.url}">${ep.title}</div>
-                        `).join('')}
+                    <div class="hdrezka-episode-list" v-if="current.season">
+                        <div class="episode-item"
+                            v-for="episode in current.season.episodes"
+                            @click="loadEpisode(episode)"
+                            :class="{active: episode.id === current.episode?.id}">
+                            {{ episode.title }}
+                        </div>
+                    </div>
+
+                    <div class="hdrezka-quality-selector" v-if="current.sources.length">
+                        <div class="quality-item"
+                            v-for="source in current.sources"
+                            @click="playVideo(source)">
+                            {{ source.quality }} ({{ source.translator }})
+                        </div>
                     </div>
                 </div>
-            `).join('');
+            </div>
+        `,
 
-            this.container.querySelector('.seasons-selector').innerHTML = html;
-            this.initEventListeners();
+        async mounted() {
+            try {
+                const html = await this.fetchData(this.$props.url);
+                this.state.seasons = this.parseSeasons(html);
+                this.state.loading = false;
+            } 
+            catch (e) {
+                Lampa.Noty.show('Ошибка загрузки данных');
+                console.error(e);
+            }
         },
 
-        initEventListeners() {
-            this.container.querySelectorAll('.season-item').forEach(el => {
-                el.addEventListener('click', () => {
-                    el.querySelector('.episodes-list').style.display = 'block';
-                });
-            });
-
-            this.container.querySelectorAll('.episode-item').forEach(el => {
-                el.addEventListener('click', async () => {
-                    const sources = await getVideoSources(el.dataset.url);
-                    this.renderQualitySelector(sources);
-                });
-            });
-        },
-
-        renderQualitySelector(sources) {
-            const html = sources.map(source => `
-                <div class="quality-item" 
-                     data-url="${source.url}"
-                     data-quality="${source.quality}"
-                     data-translator="${source.translator}">
-                    ${source.quality} (${source.translator})
-                </div>
-            `).join('');
-
-            this.container.querySelector('.quality-selector').innerHTML = html;
-            this.initQualityListeners();
-        },
-
-        initQualityListeners() {
-            this.container.querySelectorAll('.quality-item').forEach(el => {
-                el.addEventListener('click', () => {
-                    this.playVideo({
-                        url: el.dataset.url,
-                        quality: el.dataset.quality,
-                        translator: el.dataset.translator
+        methods: {
+            async fetchData(url) {
+                try {
+                    const response = await fetch(CORS_PROXY + url, {
+                        headers: {'User-Agent': USER_AGENT}
                     });
-                });
-            });
-        },
-
-        playVideo(source) {
-            Lampa.Player.play({
-                url: source.url,
-                title: `HDRezka - ${source.quality}`,
-                params: {
-                    quality: source.quality,
-                    translator: source.translator
+                    return await response.text();
+                } 
+                catch (e) {
+                    throw new Error('Ошибка сети');
                 }
-            });
+            },
+
+            parseSeasons(html) {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                return Array.from(doc.querySelectorAll('.b-simple_season__item')).map(season => ({
+                    id: season.dataset.tab_id,
+                    title: season.textContent.trim(),
+                    episodes: Array.from(season.querySelectorAll('.b-simple_episode__item')).map(episode => ({
+                        id: episode.dataset.episode_id,
+                        title: episode.textContent.trim(),
+                        url: HDREZKA_DOMAIN + episode.querySelector('a').getAttribute('href')
+                    }))
+                }));
+            },
+
+            async loadEpisode(episode) {
+                try {
+                    const html = await this.fetchData(episode.url);
+                    const sources = this.parseSources(html);
+                    
+                    this.current.episode = episode;
+                    this.current.sources = sources;
+                } 
+                catch (e) {
+                    Lampa.Noty.show('Ошибка загрузки эпизода');
+                }
+            },
+
+            parseSources(html) {
+                const match = html.match(/\[(\{.*?\})\]/);
+                try {
+                    return JSON.parse(match[0])
+                        .filter(s => s.url.match(/\.(m3u8|mp4)/))
+                        .map(s => ({
+                            url: s.url,
+                            quality: s.quality || 'HD',
+                            translator: s.translator || 'Оригинал'
+                        }));
+                } 
+                catch (e) {
+                    return [];
+                }
+            },
+
+            playVideo(source) {
+                Lampa.Player.play({
+                    url: source.url,
+                    title: this.$props.title,
+                    params: {
+                        quality: source.quality,
+                        translator: source.translator,
+                        season: this.current.season?.title,
+                        episode: this.current.episode?.title
+                    }
+                });
+            }
         }
     });
 
-    Lampa.Manifest.addPlugin({
-        name: 'HDRezka',
-        description: 'Плагин для просмотра контента с HDRezka.ag',
-        version: '1.0',
-        component: 'hdrezka',
-        onLaunch: (movie) => {
-            Lampa.Activity.push({
-                component: 'hdrezka',
-                movie: movie,
-                url: movie.url
-            });
+    // Интеграция с поиском
+    Lampa.Search.addSource({
+        title: 'HDRezka',
+        params: { lazy: true },
+
+        async search({ query }) {
+            try {
+                const html = await fetch(CORS_PROXY + HDREZKA_SEARCH + encodeURIComponent(query), {
+                    headers: { 'User-Agent': USER_AGENT }
+                });
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                return Array.from(doc.querySelectorAll('.b-content__inline_item')).map(item => ({
+                    title: item.querySelector('.title').textContent,
+                    year: item.querySelector('.year').textContent,
+                    url: HDREZKA_DOMAIN + item.querySelector('a').href,
+                    poster: item.querySelector('img').src,
+                    type: item.querySelector('.info').textContent.includes('Сериал') ? 'tv' : 'movie'
+                }));
+            } 
+            catch (e) {
+                return [];
+            }
         }
     });
 
-    console.log('HDRezka Plugin loaded');
+    // Стили
+    const styles = `
+        .hdrezka-container {
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .hdrezka-season-selector,
+        .hdrezka-episode-list {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .season-item,
+        .episode-item {
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .season-item:hover,
+        .episode-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .quality-item {
+            padding: 8px 12px;
+            background: #2196F3;
+            border-radius: 4px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    `;
+
+    document.head.insertAdjacentHTML('beforeend', `<style>${styles}</style>`);
+
+    console.log('[HDRezka Plugin] Инициализирован');
 })();
