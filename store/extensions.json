@@ -350,6 +350,13 @@
       "title": "Reedr00t",
       "results": [
 		 {
+		  "name": "Anime and trailer Off",
+		  "author": "@reedr00t",
+		  "link": "https://reedr00t.github.io/hdrezka.js",
+		  "descr": "Удаление трейлеров и аниме раздела",
+		  "available_lampa": 1
+		}, 
+	        {
 		  "name": "BwaRC v1.3.9 RR",
 		  "author": "@reedr00t",
 		  "link": "http://bwa.to/rc/jrub1f5",
