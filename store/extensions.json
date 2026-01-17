@@ -549,7 +549,21 @@
 		  "link": "https://bylampa.github.io/account.js",
 		  "descr": "Синхронизация и резервное копирование настроек Lampa как альтернатива стандартному CUB",
 		  "available_lampa": 1
-		}
+		},
+		{
+		  "name": "ByLampa Store",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://bylampa.github.io/addon.js",
+		  "descr": "Альтернативный магазин плагинов от активного сообщества разработчиков с уникальными расширениями",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "LampaPlugins Store",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://lampaplugins.github.io/store/store.js",
+		  "descr": "Расширенный каталог плагинов с большим выбором расширений для различных потребностей",
+		  "available_lampa": 1
+		}   
       ],
       "hpu": "test"
     }
