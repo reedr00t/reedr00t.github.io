@@ -551,20 +551,6 @@
 		  "available_lampa": 1
 		},
 		{
-		  "name": "ByLampa Store",
-		  "author": "@lampa.nnslvp.io",
-		  "link": "https://bylampa.github.io/addon.js",
-		  "descr": "Альтернативный магазин плагинов от активного сообщества разработчиков с уникальными расширениями",
-		  "available_lampa": 1
-		},
-		{
-		  "name": "LampaPlugins Store",
-		  "author": "@lampa.nnslvp.io",
-		  "link": "https://lampaplugins.github.io/store/store.js",
-		  "descr": "Расширенный каталог плагинов с большим выбором расширений для различных потребностей",
-		  "available_lampa": 1
-		} ,
-		{
 		  "name": "Free TorrServer",
 		  "author": "@lampa.nnslvp.io",
 		  "link": "https://bylampa.github.io/freetorr.js",
@@ -584,7 +570,35 @@
 		  "link": "https://github.freebie.tom.ru/torrents.js",
 		  "descr": "Дополнительная кнопка поиска торрентов для расширенного поиска контента.",
 		  "available_lampa": 1
-		} 
+		},
+		{
+		  "name": "BWA Cloud",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "http://bwa.to/cloud.js",
+		  "descr": "Облачный сервис с высокой стабильностью и надежностью, оптимизированный для работы с различными устройствами",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Filmix",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://immisterio.github.io/bwa/fx.js",
+		  "descr": "Плагин для доступа к популярному онлайн-кинотеатру Filmix с большой библиотекой контента",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Categories",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://lampame.github.io/main/newcategory.js",
+		  "descr": "Дополнительные категории и каталоги контента для более удобной навигации по фильмам и сериалам",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Collections",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://cub.red/plugin/collections",
+		  "descr": "Коллекции фильмов включая топ-100, жанровые подборки и тематические списки",
+		  "available_lampa": 1
+		}  
       ],
       "hpu": "test"
     }
