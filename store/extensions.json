@@ -532,6 +532,26 @@
 		}
       ],
       "hpu": "other"
+    },
+	{
+      "title": "Test",
+      "results": [
+		 {
+		  "name": "CUB Disable",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://bylampa.github.io/cub_off.js",
+		  "descr": "Отключение рекламы CUB Premium и других рекламных элементов в интерфейсе Lampa",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "Account Sync",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://bylampa.github.io/account.js",
+		  "descr": "Синхронизация и резервное копирование настроек Lampa как альтернатива стандартному CUB",
+		  "available_lampa": 1
+		}
+      ],
+      "hpu": "test"
     }
   ]
 }
