@@ -563,7 +563,28 @@
 		  "link": "https://lampaplugins.github.io/store/store.js",
 		  "descr": "Расширенный каталог плагинов с большим выбором расширений для различных потребностей",
 		  "available_lampa": 1
-		}   
+		} ,
+		{
+		  "name": "Free TorrServer",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://bylampa.github.io/freetorr.js",
+		  "descr": "Автоматическое подключение к бесплатным публичным TorrServer серверам для удобного просмотра торрентов",
+		  "available_lampa": 1
+		},
+		{
+		  "name": "TS Preload",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://plugin.rootu.top/ts-preload.js",
+		  "descr": "Визуализация предзагрузки торрентов TorrServer с индикаторами прогресса и статистикой",
+		  "available_lampa": 1
+		}, 
+		 {
+		  "name": "Torrents Search",
+		  "author": "@lampa.nnslvp.io",
+		  "link": "https://github.freebie.tom.ru/torrents.js",
+		  "descr": "Дополнительная кнопка поиска торрентов для расширенного поиска контента.",
+		  "available_lampa": 1
+		} 
       ],
       "hpu": "test"
     }
